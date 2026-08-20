@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FBF7F2; /* Warm sand */
+  --foreground: #222018; /* Ink */
+}
+
+@theme {
+  /* Editorial Color Palette */
+  --color-ink: #222018;
+  --color-terracotta: #B5502A;
+  --color-warm-sand: #FBF7F2;
+  --color-muted-clay: #6B655D;
+  --color-pure-white: #FFFFFF;
+
+  /* Editorial Fonts */
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), Arial, sans-serif;
+  
+  /* Animations & Transitions */
+  --animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom Base Styles */
+body {
+  background-color: var(--color-warm-sand);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Scrollbar styling for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-warm-sand);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted-clay);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta);
+}
+
+/* 3D Postcard Flip Utility Classes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Micro-animations and effects */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(34, 32, 24, 0.15);
+}
+
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-hover {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-zoom-container:hover .image-zoom-hover {
+  transform: scale(1.05);
+}
