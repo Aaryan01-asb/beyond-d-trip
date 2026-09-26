@@ -28,16 +28,18 @@ export default function Footer() {
     <footer className="bg-warm-sand border-t border-ink/5 text-ink pt-16 pb-8 px-6 md:px-12 w-full mt-auto">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 mb-12">
         
-        {/* Editorial Brand Section */}
         <div className="flex flex-col gap-4">
-          <div className="bg-pure-white px-3 py-2.5 rounded-xl shadow-md flex items-center justify-center self-start">
+          <Link href="/" className="flex items-center gap-3 self-start group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo.jpg"
+              src="/logo-green-icon.png"
               alt="Beyond D Trips Logo"
-              className="h-10 w-auto object-contain"
+              className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
             />
-          </div>
+            <span className="font-sans text-sm font-medium tracking-wide text-ink group-hover:text-terracotta transition-colors uppercase">
+              BEYOND D TRIPS
+            </span>
+          </Link>
           <p className="text-sm text-muted-clay leading-relaxed max-w-xs">
             Where the itinerary ends, the trip begins. Cozy editorial travel curations, designed for aesthetic-conscious wanderers.
           </p>

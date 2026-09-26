@@ -13,18 +13,16 @@ export default function Navbar() {
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-ink/90 backdrop-blur-md border border-pure-white/10 text-pure-white px-6 py-3 rounded-2xl shadow-xl transition-all duration-300">
       <div className="flex items-center justify-between">
-        {/* Brand Logo */}
+        {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="bg-pure-white px-3 py-1.5 rounded-xl shadow-md flex items-center justify-center transition-all group-hover:scale-102">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logo.jpg"
-              alt="Beyond D Trips Logo"
-              className="h-10 w-auto object-contain"
-            />
-          </div>
-          <span className="hidden sm:inline-block font-sans text-[10px] uppercase tracking-widest text-muted-clay group-hover:text-terracotta transition-colors pt-1">
-            Beyond D Trips
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-green-icon.png"
+            alt="Beyond D Trips Logo"
+            className="h-10 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+          <span className="font-sans text-sm font-medium tracking-wide text-pure-white group-hover:text-terracotta transition-colors uppercase">
+            BEYOND D TRIPS
           </span>
         </Link>
 
@@ -47,6 +45,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMobileMenu}
+          aria-label="Toggle Navigation Menu"
           className="md:hidden p-2 text-pure-white hover:text-terracotta transition-colors cursor-pointer"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -55,7 +54,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Panel */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-4 pt-4 border-t border-pure-white/10 flex flex-col gap-4 text-sm font-medium animate-fade-in">
+        <div className="md:hidden mt-4 pt-4 border-t border-pure-white/10 flex flex-col gap-4 text-sm font-medium tracking-wide animate-fade-in">
           <Link
             href="/horizons"
             className="flex items-center gap-2 hover:text-terracotta transition-colors py-1"
