@@ -113,3 +113,71 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 .image-zoom-container:hover .image-zoom-hover {
   transform: scale(1.05);
 }
+
+/* Custom Google Place Card Styles */
+.bd-place-card {
+  max-width: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #F5F1EA;
+  color: #1C1A17;
+  box-shadow: 0 16px 40px rgba(0,0,0,.2);
+  margin: 0 auto;
+}
+.bd-place-cover {
+  padding: 24px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+.bd-place-cover img {
+  width: 160px;
+  height: auto;
+}
+.bd-place-body { padding: 18px 20px; }
+.bd-place-body h3 {
+  margin: 0 0 2px;
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  color: #145A32;
+}
+.bd-place-sub { margin: 0 0 16px; color: #5C564C; font-size: .85rem; }
+.bd-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.bd-actions a {
+  text-decoration: none;
+  color: #1C1A17;
+  font-size: .72rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.bd-actions a span {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #145A32;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.bd-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #E2DBCC;
+}
+.bd-details li {
+  padding: 10px 0;
+  font-size: .85rem;
+  color: #5C564C;
+  border-bottom: 1px solid #E2DBCC;
+}
